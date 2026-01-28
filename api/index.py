@@ -29,8 +29,8 @@ def is_user_joined(chat_id):
 def send_force_join(chat_id):
     markup = types.InlineKeyboardMarkup()
     markup.row(
-        types.InlineKeyboardButton("📢 Join Public", url=f"https://t.me/{PUBLIC_CHANNEL.strip('@')}"),
-        types.InlineKeyboardButton("🔐 Join Private", url="https://t.me/+mL09ZgHctA5hZDA9" + str(PRIVATE_CHANNEL_ID)[4:])
+        types.InlineKeyboardButton("📢 Join 1", url=f"https://t.me/{PUBLIC_CHANNEL.strip('@')}"),
+        types.InlineKeyboardButton("🔐 Join 2", url="https://t.me/+h1s1jG6XizAxMzQ1" + str(PRIVATE_CHANNEL_ID)[4:])
     )
     markup.add(types.InlineKeyboardButton("✅ JOINED", callback_data="check_join"))
     bot.send_message(chat_id, "🚫 To use this bot, please join both channels first:", reply_markup=markup)
